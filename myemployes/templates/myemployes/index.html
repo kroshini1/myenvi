@@ -1,0 +1,25 @@
+<h1> employes </h1>
+
+{% for employee in employees %}
+    {{employee.summary}}
+    <br>
+{% endfor %}
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+  background-colour: powdergreen;
+    }
+  </style>
+	<title>Employee Details Home Page</title>
+</head>
+<body>
+	<h1>Welcome to the Employee Details Home Page</h1>
+	<p>Please click the button below to view the employee details.</p>
+  <a href="{% url 'emp' %}">View Employee Details</a>
+ <h2>Employee List</h2>
+  	{% for employee in employees %}
+  		<p>{{ employee.summary }}</p>
+  	{% endfor %}</body>
+</html>
